@@ -1,0 +1,5 @@
+{
+  "oscInPort": 3333,
+  "mqttServer": "mqtt://test.mosquitto.org",
+  "mqttOutTopic": "my/custom/topic"
+}

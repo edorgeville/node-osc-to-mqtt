@@ -1,0 +1,16 @@
+{
+  "name": "osc-to-mqtt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erwan d'Orgeville <info@erwandorgeville.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mqtt": "^4.2.8",
+    "node-osc": "^6.1.5"
+  }
+}
