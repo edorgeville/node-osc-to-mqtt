@@ -10,6 +10,10 @@ var oscServer = new Server(oscInPort, '0.0.0.0', () => {
 })
 
 oscServer.on('message', (msg) => {
-  console.log(`Message: ${msg}`)
-  client.publish(mqttOutTopic, msg)
+  const [oscTopic, oscPayload] = msg
+  console.log(`Received on topic: "${oscTopic}", size: "${oscPayload.length}"`)
+  const mqttTopic = oscTopic.substring(1)
+  const mqttPayload = oscPayload.toString()
+  console.log(`Sending on topic: "${mqttTopic}", size: "${mqttPayload.length}"`)
+  client.publish(mqttTopic, mqttPayload)
 })
